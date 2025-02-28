@@ -1,0 +1,698 @@
+//VARIABLES DE COLOR
+$colorBlack: #000;
+$colorBlanco: #FEFFFA;
+$colorNegro: #0d234a;
+$colorGris: #606060;
+$colorRosaOscuro: #cccccc;
+$colorRosaBebe: #6f6f6f;
+$colorRosaMuyOscuro: #DDCF90;
+$colorRosaMuyClaro: #DDCF90;
+
+
+//FONT FAMYLY
+$fuentePrincipal: 'Dancing Script', cursive;
+$fuenteSecundaria: 'Berkshire Swash', serif;
+
+
+
+//FONT SIZE
+$titulos: 50px;
+$subTitulos: 35px;
+$parrafos: 20px;
+
+
+//BORDES
+$bordeNormal: 25px;
+
+
+//GENERALES
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $colorBlanco;
+  font-family: $fuentePrincipal;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+  font-size: $titulos;
+  font-weight: initial;
+}
+
+p {
+  font-size: $parrafos;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.divScroll {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: right;
+  z-index: 99;
+
+  #scrollButton {
+    width: 55px;
+    height: 55px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    background-color: $colorRosaOscuro;
+    color: $colorBlanco;
+    border-radius: 35px;
+
+    svg {
+      position: relative;
+      left: -2px;
+    }
+  }
+}
+
+
+
+.samsung {
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  margin: auto;
+  top: 50%;
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  .modalA {
+    display: flex;
+    float: right;
+    top: -17px;
+    position: relative;
+    right: -15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+  }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#close-modal {
+  color: transparent;
+}
+}
+
+
+
+//SVG
+.svg {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  left: 0;
+
+  &-right {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    right: 0;
+  }
+
+  &-cont {
+    background: $colorRosaOscuro;
+    padding: 5px;
+    border-radius: $bordeNormal;
+
+    &--distinto {
+      background: $colorRosaBebe;
+    }
+  }
+}
+
+
+
+//NAVBAR
+.header {
+  background-color: $colorNegro;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $colorBlanco;
+}
+
+
+
+//INICIO
+.inicio {
+  height: 650px;
+  text-align: center;
+
+  div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    align-content: center;
+
+    h1 {
+      font-size: 60px;
+    }
+  }
+
+  .hojaLeft {
+    position: absolute;
+    left: 6px;
+    top: 4rem;
+    width: 8rem;
+  }
+
+  .hojaRight {
+    position: absolute;
+    right: 0;
+    width: 8rem;
+    top: 30rem;
+  }
+}
+
+
+
+//BLOQUE DE TEXTO 1
+.contenedorDeTexto {
+  margin: 0 auto;
+  width: 80%;
+  padding: 6rem 2rem 2rem 2rem;
+  text-align: center;
+  color: $colorNegro;
+
+  h1 {
+    font-size: $subTitulos;
+    font-family: $fuentePrincipal;
+    display: flex;
+    line-height: 1.2;
+    justify-content: center;
+  }
+
+  &-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+
+    p {
+      color: $colorBlack;
+    }
+
+    .cont1 {
+
+      .fckNos {
+        font-family: $fuentePrincipal;
+      }
+      
+      svg {
+        background-color: $colorRosaOscuro;
+        border-radius: 50px;
+        padding: 15px;
+        width: 60px;
+      }
+    }
+
+    .cont2 {
+
+      svg {
+        background-color: $colorNegro;
+        border-radius: 50px;
+        padding: 15px;
+        width: 60px;
+      }
+    }
+
+    .cont3 {
+
+      svg {
+        background-color: $colorRosaOscuro;
+        border-radius: 50px;
+        padding: 15px;
+      }
+    }
+  }
+
+  .modalIcons {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: $colorNegro;
+    width: 80%;
+    height: 50%;
+    z-index: 99999999999999;
+    flex-direction: column;
+    justify-content: center;
+
+    &-hash {
+      background-color: $colorRosaOscuro!important;
+
+      p {
+        color: $colorBlanco!important;
+      }
+    }
+
+    &-dress {
+      background-color: $colorRosaMuyClaro!important;
+    }
+
+    h2 {
+      font-size: $titulos;
+      color: $colorBlanco;
+      margin: 0;
+    }
+
+    p {
+      font-size: $parrafos;
+      color: $colorBlanco;
+      font-family: $fuenteSecundaria;
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 3px;
+      font-size: 22px;
+    }
+  }
+
+  /* Estilos para el fondo oscuro fuera del modal */
+  .modal-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+
+
+//COUNTDOWN
+.countDown {
+  margin: 0 auto 0 auto;
+  width: 100%;
+  color: $colorNegro;
+  text-align: center;
+  padding: 10rem 0 4rem 0;
+
+  &-h1 {
+    font-family: $fuenteSecundaria;
+    font-size: $subTitulos!important;
+  }
+
+  h1 {
+    font-size: $titulos;
+  }
+
+  &-date {
+    margin-bottom: 3rem;
+
+    &--color {
+      color: $colorRosaBebe;
+    }
+  }
+
+  &-felxContent {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+    background-color: $colorNegro;
+    color: $colorBlanco;
+    width: 90%;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-family: $fuenteSecundaria;
+
+    &--content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px 0;
+    }
+  }
+
+  .contHojas {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &-right {
+      position: absolute;
+      top: 22rem;
+      width: 5rem;
+    }
+
+    &-left {
+      position: absolute;
+      left: 5px;
+      top: 7rem;
+      width: 4rem;
+    }
+  }
+}
+
+.countdown-number {
+  font-size: 20px;
+}
+
+.countdown-label {
+  font-size: 20px;
+}
+
+@media (max-width: 550px) {
+
+  .countDown {
+    font-size: 25px;
+    border-radius: 0;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .countDown {
+    font-size: 22px;
+
+    &-felxContent {
+
+      &--content {
+        font-size: 22px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  .countDown {
+    font-size: 20px;
+
+    &-felxContent {
+
+      &--content {
+        font-size: 20px;
+      }
+    }
+  }
+
+}
+
+
+
+//LUGAR
+.contenedorLugar {
+  margin: 0 auto;
+  padding: 4rem 0 4rem 0;
+  width: 80%;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: $colorBlanco;
+
+  &-borders {
+    padding: 2rem 0;
+  }
+
+  h1 {
+    color: $colorNegro;
+  }
+
+  &-mapa {
+    width: 80%;
+    margin: 2rem auto 0 auto;
+    background: $colorRosaOscuro;
+    border-radius: 15px;
+    padding: 3rem 1rem;
+    font-family: $fuenteSecundaria;
+
+    h2 {
+      margin: 0px auto 5px auto;
+      padding-bottom: 5px;
+      border-bottom: solid 1px;
+      width: 85%;
+      font-size: $subTitulos;
+      color: $colorNegro;
+    }
+
+    p {
+      color: $colorNegro;
+    }
+
+    iframe {
+      width: 85%;
+      max-width: 650px;
+      height: 350px;
+      object-fit: cover;
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+
+  .contenedorLugar {
+    width: 100%;
+    padding: 4rem 0;
+  }
+}
+
+//FORMULARIO
+.formSection {
+  padding: 4rem 0 4rem 0;
+  text-align: center;
+  color: $colorGris;
+
+  .contHojasForm {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &-right {
+      position: absolute;
+      top: -8rem;
+      width: 6rem;
+    }
+
+    &-left {
+      position: absolute;
+      left: 7px;
+      top: 41.5rem;
+      width: 5rem;
+    }
+  }
+
+  &-div {
+    margin: auto;
+    width: 100%;
+  }
+
+  &-flex {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  h1 {
+    margin-bottom: 3rem;
+    color: $colorNegro;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: $colorNegro;
+    width: 70%;
+    margin: auto;
+    padding: 2.5rem;
+    border-radius: 15px;
+    font-family: $fuenteSecundaria;
+
+    label {
+      font-weight: initial;
+      color: $colorBlanco;
+    }
+
+    input,
+    textarea {
+      border: 0;
+      font-size: 16px;
+      outline: none;
+    }
+
+    button {
+      width: 50%;
+      margin: auto;
+      padding: 15px;
+      border-radius: $bordeNormal;
+      border: 0;
+      font-size: 16px;
+      background-color: $colorRosaOscuro;
+      color: $colorBlanco;
+      font-weight: bold;
+      font-family: $fuentePrincipal;
+
+      &:hover {
+        background-color: $colorBlanco;
+        color: $colorRosaOscuro;
+      }
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 16px;
+      line-height: 22px;
+      color: $colorBlanco;
+
+      a {
+        position: absolute;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .confirmacion {
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #D22A4E;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    top: -51px;
+  }
+
+  .nombreForm {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+
+    input {
+      background: $colorBlanco;
+      width: 100%;
+      font-family: initial;
+      font-size: 14px;
+      padding: 6px 5px;
+      border-radius: 15px;
+      color: #6C786BD6;
+    }
+  }
+
+  .radioButton {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    margin-top: 15px;
+  }
+}
+
+
+
+//TEXT 2 
+.text2 {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding: 4rem 0;
+
+  h1 {
+    color: $colorRosaOscuro;
+  }
+
+  p {
+    color: $colorNegro;
+    margin-bottom: 1rem;
+    font-family: $fuenteSecundaria;
+  }
+
+  .hojaFin {
+
+    img {
+      position: absolute;
+      right: 0;
+      width: 6rem;
+    }
+  }
+}
+
+
+
+//FOOTER
+.footer {
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 8rem;
+  background: $colorRosaBebe;
+  padding-bottom: 2rem;
+
+  p {
+    font-size: 14px;
+    color: $colorGris;
+
+    a {
+      color: $colorRosaMuyOscuro;
+
+      img {
+        width: 70px;
+        position: relative;
+        top: 21px;
+        margin-left: 8px;
+      }
+    }
+  }
+}

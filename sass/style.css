@@ -1,0 +1,546 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #FEFFFA;
+  font-family: "Dancing Script", cursive;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+  font-size: 50px;
+  font-weight: initial;
+}
+
+p {
+  font-size: 20px;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.divScroll {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: right;
+  z-index: 99;
+}
+.divScroll #scrollButton {
+  width: 55px;
+  height: 55px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  background-color: #cccccc;
+  color: #FEFFFA;
+  border-radius: 35px;
+}
+.divScroll #scrollButton svg {
+  position: relative;
+  left: -2px;
+}
+
+.samsung {
+  /* Estilos para el modal */
+}
+.samsung .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.samsung .modal-content {
+  margin: auto;
+  top: 50%;
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.samsung .modal-content .modalA {
+  display: flex;
+  float: right;
+  top: -17px;
+  position: relative;
+  right: -15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+.samsung .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.samsung .close:hover,
+.samsung .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.samsung #close-modal {
+  color: transparent;
+}
+
+.svg {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  left: 0;
+}
+.svg-right {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  right: 0;
+}
+.svg-cont {
+  background: #cccccc;
+  padding: 5px;
+  border-radius: 25px;
+}
+.svg-cont--distinto {
+  background: #6f6f6f;
+}
+
+.header {
+  background-color: #0d234a;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FEFFFA;
+}
+
+.inicio {
+  height: 650px;
+  text-align: center;
+}
+.inicio div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  align-content: center;
+}
+.inicio div h1 {
+  font-size: 60px;
+}
+.inicio .hojaLeft {
+  position: absolute;
+  left: 6px;
+  top: 4rem;
+  width: 8rem;
+}
+.inicio .hojaRight {
+  position: absolute;
+  right: 0;
+  width: 8rem;
+  top: 30rem;
+}
+
+.contenedorDeTexto {
+  margin: 0 auto;
+  width: 80%;
+  padding: 6rem 2rem 2rem 2rem;
+  text-align: center;
+  color: #0d234a;
+  /* Estilos para el fondo oscuro fuera del modal */
+}
+.contenedorDeTexto h1 {
+  font-size: 35px;
+  font-family: "Dancing Script", cursive;
+  display: flex;
+  line-height: 1.2;
+  justify-content: center;
+}
+.contenedorDeTexto-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.contenedorDeTexto-icons p {
+  color: #000;
+}
+.contenedorDeTexto-icons .cont1 .fckNos {
+  font-family: "Dancing Script", cursive;
+}
+.contenedorDeTexto-icons .cont1 svg {
+  background-color: #cccccc;
+  border-radius: 50px;
+  padding: 15px;
+  width: 60px;
+}
+.contenedorDeTexto-icons .cont2 svg {
+  background-color: #0d234a;
+  border-radius: 50px;
+  padding: 15px;
+  width: 60px;
+}
+.contenedorDeTexto-icons .cont3 svg {
+  background-color: #cccccc;
+  border-radius: 50px;
+  padding: 15px;
+}
+.contenedorDeTexto .modalIcons {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #0d234a;
+  width: 80%;
+  height: 50%;
+  z-index: 99999999999999;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenedorDeTexto .modalIcons-hash {
+  background-color: #cccccc !important;
+}
+.contenedorDeTexto .modalIcons-hash p {
+  color: #FEFFFA !important;
+}
+.contenedorDeTexto .modalIcons-dress {
+  background-color: #DDCF90 !important;
+}
+.contenedorDeTexto .modalIcons h2 {
+  font-size: 50px;
+  color: #FEFFFA;
+  margin: 0;
+}
+.contenedorDeTexto .modalIcons p {
+  font-size: 20px;
+  color: #FEFFFA;
+  font-family: "Berkshire Swash", serif;
+}
+.contenedorDeTexto .modalIcons button {
+  position: absolute;
+  top: 0;
+  right: 3px;
+  font-size: 22px;
+}
+.contenedorDeTexto .modal-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.countDown {
+  margin: 0 auto 0 auto;
+  width: 100%;
+  color: #0d234a;
+  text-align: center;
+  padding: 10rem 0 4rem 0;
+}
+.countDown-h1 {
+  font-family: "Berkshire Swash", serif;
+  font-size: 35px !important;
+}
+.countDown h1 {
+  font-size: 50px;
+}
+.countDown-date {
+  margin-bottom: 3rem;
+}
+.countDown-date--color {
+  color: #6f6f6f;
+}
+.countDown-felxContent {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-around;
+  background-color: #0d234a;
+  color: #FEFFFA;
+  width: 90%;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  font-family: "Berkshire Swash", serif;
+}
+.countDown-felxContent--content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0;
+}
+.countDown .contHojas {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.countDown .contHojas-right {
+  position: absolute;
+  top: 22rem;
+  width: 5rem;
+}
+.countDown .contHojas-left {
+  position: absolute;
+  left: 5px;
+  top: 7rem;
+  width: 4rem;
+}
+
+.countdown-number {
+  font-size: 20px;
+}
+
+.countdown-label {
+  font-size: 20px;
+}
+
+@media (max-width: 550px) {
+  .countDown {
+    font-size: 25px;
+    border-radius: 0;
+  }
+}
+@media (max-width: 400px) {
+  .countDown {
+    font-size: 22px;
+  }
+  .countDown-felxContent--content {
+    font-size: 22px;
+  }
+}
+@media (max-width: 320px) {
+  .countDown {
+    font-size: 20px;
+  }
+  .countDown-felxContent--content {
+    font-size: 20px;
+  }
+}
+.contenedorLugar {
+  margin: 0 auto;
+  padding: 4rem 0 4rem 0;
+  width: 80%;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #FEFFFA;
+}
+.contenedorLugar-borders {
+  padding: 2rem 0;
+}
+.contenedorLugar h1 {
+  color: #0d234a;
+}
+.contenedorLugar-mapa {
+  width: 80%;
+  margin: 2rem auto 0 auto;
+  background: #cccccc;
+  border-radius: 15px;
+  padding: 3rem 1rem;
+  font-family: "Berkshire Swash", serif;
+}
+.contenedorLugar-mapa h2 {
+  margin: 0px auto 5px auto;
+  padding-bottom: 5px;
+  border-bottom: solid 1px;
+  width: 85%;
+  font-size: 35px;
+  color: #0d234a;
+}
+.contenedorLugar-mapa p {
+  color: #0d234a;
+}
+.contenedorLugar-mapa iframe {
+  width: 85%;
+  max-width: 650px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 2rem;
+}
+
+@media (max-width: 550px) {
+  .contenedorLugar {
+    width: 100%;
+    padding: 4rem 0;
+  }
+}
+.formSection {
+  padding: 4rem 0 4rem 0;
+  text-align: center;
+  color: #606060;
+}
+.formSection .contHojasForm {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.formSection .contHojasForm-right {
+  position: absolute;
+  top: -8rem;
+  width: 6rem;
+}
+.formSection .contHojasForm-left {
+  position: absolute;
+  left: 7px;
+  top: 41.5rem;
+  width: 5rem;
+}
+.formSection-div {
+  margin: auto;
+  width: 100%;
+}
+.formSection-flex {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.formSection h1 {
+  margin-bottom: 3rem;
+  color: #0d234a;
+}
+.formSection form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background: #0d234a;
+  width: 70%;
+  margin: auto;
+  padding: 2.5rem;
+  border-radius: 15px;
+  font-family: "Berkshire Swash", serif;
+}
+.formSection form label {
+  font-weight: initial;
+  color: #FEFFFA;
+}
+.formSection form input,
+.formSection form textarea {
+  border: 0;
+  font-size: 16px;
+  outline: none;
+}
+.formSection form button {
+  width: 50%;
+  margin: auto;
+  padding: 15px;
+  border-radius: 25px;
+  border: 0;
+  font-size: 16px;
+  background-color: #cccccc;
+  color: #FEFFFA;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+}
+.formSection form button:hover {
+  background-color: #FEFFFA;
+  color: #cccccc;
+}
+.formSection form p {
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FEFFFA;
+}
+.formSection form p a {
+  position: absolute;
+  margin-left: 5px;
+}
+.formSection .confirmacion {
+  width: 50%;
+  margin: auto;
+  padding: 15px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #D22A4E;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  top: -51px;
+}
+.formSection .nombreForm {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+.formSection .nombreForm input {
+  background: #FEFFFA;
+  width: 100%;
+  font-family: initial;
+  font-size: 14px;
+  padding: 6px 5px;
+  border-radius: 15px;
+  color: rgba(108, 120, 107, 0.8392156863);
+}
+.formSection .radioButton {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  margin-top: 15px;
+}
+
+.text2 {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding: 4rem 0;
+}
+.text2 h1 {
+  color: #cccccc;
+}
+.text2 p {
+  color: #0d234a;
+  margin-bottom: 1rem;
+  font-family: "Berkshire Swash", serif;
+}
+.text2 .hojaFin img {
+  position: absolute;
+  right: 0;
+  width: 6rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 8rem;
+  background: #6f6f6f;
+  padding-bottom: 2rem;
+}
+.footer p {
+  font-size: 14px;
+  color: #606060;
+}
+.footer p a {
+  color: #DDCF90;
+}
+.footer p a img {
+  width: 70px;
+  position: relative;
+  top: 21px;
+  margin-left: 8px;
+}/*# sourceMappingURL=style.css.map */
