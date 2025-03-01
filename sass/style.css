@@ -178,7 +178,7 @@ button {
 }
 .contenedorDeTexto-icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 3rem;
 }
 .contenedorDeTexto-icons p {
@@ -304,9 +304,8 @@ button {
 }
 .countDown .contHojas-left {
   position: absolute;
-  left: 5px;
-  top: 7rem;
-  width: 4rem;
+  top: -8rem;
+  width: 5rem;
 }
 
 .countdown-number {
