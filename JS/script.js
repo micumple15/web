@@ -36,7 +36,6 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
   personaContainers.forEach(function (personaContainer, index) {
     // Obtén los datos de la persona actual
     var nombre = personaContainer.querySelector('[name="nombre"]').value;
-    var menu = personaContainer.querySelector('[name="menu"]').value;
     var cancion = personaContainer.querySelector('[name="cancion"]').value;
 
     // Obtén el valor del radio button seleccionado
@@ -47,8 +46,6 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
     messages.push(
       `\n` +
       `*Nombre:* ${nombre}\n` +
-      `\n` +
-      `*Menú:* ${menu}\n` +
       `\n` +
       `*Canción:* ${cancion}\n` +
       `\n` +
