@@ -225,7 +225,7 @@ button {
   color: #FEFFFA !important;
 }
 .contenedorDeTexto .modalIcons-dress {
-  background-color: #DDCF90 !important;
+  background-color: #cccccc !important;
 }
 .contenedorDeTexto .modalIcons h2 {
   font-size: 50px;
@@ -242,6 +242,7 @@ button {
   top: 0;
   right: 3px;
   font-size: 22px;
+  color: #fff;
 }
 .contenedorDeTexto .modal-background {
   display: none;
