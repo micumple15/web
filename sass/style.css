@@ -379,6 +379,8 @@ button {
   -o-object-fit: cover;
      object-fit: cover;
   margin-top: 2rem;
+  border: solid 4px #0d234a;
+  border-radius: 5px;
 }
 
 @media (max-width: 550px) {

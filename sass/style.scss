@@ -494,6 +494,8 @@ button {
       height: 350px;
       object-fit: cover;
       margin-top: 2rem;
+      border: solid 4px $colorNegro;
+      border-radius: 5px;
     }
   }
 }
