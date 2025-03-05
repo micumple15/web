@@ -55,6 +55,35 @@
   </div>
   <!--FIN INICIO-->
 
+  <div class="sky">
+    <div class="stars"></div>
+    <div class="stars1"></div>
+    <div class="stars2"></div>
+    <div class="shooting-stars"></div>
+  </div>
+
+  <!--HEADER SLIDER-->
+  <section>
+    <div class="swiper effectLeft" id="section2">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="Imagenes/Marti1.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="Imagenes/Marti2.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="Imagenes/marti3.jpeg" alt=""></div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+  </section>
+  <!--FIN SLIDER-->
+
   <!--BLOQUE DE TEXTO-->
   <section class="contenedorDeTexto">
     <div class="effectOpacity">
@@ -76,7 +105,7 @@
         <div id="modal1" class="modalIcons">
           <h2>Presente</h2>
           <p>Si deseas dejar tu regalo podes hacerlo por acá</p>
-          <p>Alias:xxxx</p>
+          <p>Alias:marti312</p>
           <button onclick="closeModal1('modal1')">x</button>
         </div>
 
@@ -95,7 +124,7 @@
 
         <div id="modal3" class="modalIcons modalIcons-dress">
           <h2>Dresscode</h2>
-          <p>Semiformal</p>
+          <p>Casual</p>
           <button onclick="closeModal1('modal3')">x</button>
         </div>
 
@@ -145,7 +174,8 @@
       <h1>Ubicación</h1>
       <div class="contenedorLugar-mapa">
         <h2>Marquez Eventos</h2>
-        <p>21:00 hs</p>
+        <p class="informacion2">21:00 a 02:00 hs</p>
+        <p class="informacion">Se ruega puntualidad, ya que la tirada se realizará a las 21:30 hs.</p>
         <div>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.8918035601905!2d-68.81523969999999!3d-32.9010288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0f13307adb0f%3A0xbce3311cac96b174!2sEl%20Marquez%20Eventos!5e0!3m2!1ses-419!2sar!4v1740694281771!5m2!1ses-419!2sar" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -191,7 +221,7 @@
             </div>
 
             <!-- Campo oculto para el enlace de WhatsApp -->
-            <input type="hidden" id="whatsappLink" value="https://wa.me/261?text=Confirmo%20mi%20Asistencia! 😄">
+            <input type="hidden" id="whatsappLink" value="https://wa.me/2612071010?text=Confirmo%20mi%20Asistencia! 😄">
 
           </div>
         </div>
@@ -229,6 +259,8 @@
   <!--SCRIPTS-->
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="JS/autoscroll.js"></script>
+  <script src="JS/gliter.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="JS/app.js"></script>
   <script src="JS/effects.js"></script>
   <script src="JS/contDown.js"></script>
